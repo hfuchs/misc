@@ -3,5 +3,13 @@ The famous misc repo™
 
 A very volatile repository of arbitrary things.  Now you're up to speed.
 
-2011-09-22, HF
+Contents
+-----------
+
+  + cssh_action_test.pl, A small script that exhibits the same odd
+    behaviour as ClusterSSH when issuing compound commands with the '-a'
+    flag.  /Heavily/ commented!
+
+
+2011-11-05, HF - Added cssh_action_test.pl.
 
