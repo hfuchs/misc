@@ -10,6 +10,8 @@ Contents
     behaviour as ClusterSSH when issuing compound commands with the '-a'
     flag.  /Heavily/ commented!
 
+  + pink_noise.sh, a better, off-line version of simplynoise.com.
 
 2011-11-05, HF - Added cssh_action_test.pl.
+2011-11-21, HF - Added pink_noise.sh.
 
