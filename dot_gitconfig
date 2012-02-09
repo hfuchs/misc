@@ -1,0 +1,16 @@
+[user]
+	name = Hagen Fuchs
+	email = code@hfuchs.net
+[core]
+	autocrlf = input
+[color]
+    ui = auto
+	branch = auto
+	diff = auto
+	interactive = auto
+	status = auto
+[alias]
+	st = status -sb
+	l = log --oneline --decorate
+	s = status -sb
+    branch = branch -a
