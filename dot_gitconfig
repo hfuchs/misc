@@ -4,7 +4,7 @@
 [core]
 	autocrlf = input
 [color]
-    ui = auto
+	ui = auto
 	branch = auto
 	diff = auto
 	interactive = auto
@@ -13,4 +13,6 @@
 	st = status -sb
 	l = log --oneline --decorate
 	s = status -sb
-    branch = branch -a
+	branch = branch -a
+[push]
+	default = tracking
