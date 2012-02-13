@@ -1,6 +1,6 @@
 [user]
-	name = Hagen Fuchs
-	email = code@hfuchs.net
+	name = YOUR NAME
+	email = YOUR@EMAIL.net
 [core]
 	autocrlf = input
 [color]
