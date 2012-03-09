@@ -6,6 +6,8 @@ A very volatile repository of arbitrary things.  Now you're up to speed.
 Contents
 -----------
 
+  + init.d_revssh, a init-script that keeps a reverse ssh session alive.
+
   + dot_gitconfig, A trivial git configuration file, usable as
     ~/.gitconfig
 
@@ -18,4 +20,5 @@ Contents
 2011-11-05, HF - Added cssh_action_test.pl.
 2011-11-21, HF - Added pink_noise.sh.
 2012-02-09, HF - Added dot_gitconfig.
+2012-03-09, HF - Added init.d_revssh.
 
