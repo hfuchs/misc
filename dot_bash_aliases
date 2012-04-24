@@ -1,0 +1,11 @@
+# today
+alias tdy=$(date +"%Y-%m-%d")
+
+# tmux
+alias tmux="TERM=xterm-256color tmux"
+
+# Git aliases?  See git-config.  But I regularly simply jump to the
+# examples in the git man pages, so, I'll have me an alias for that.
+# 2012-04-20, In light of exiftool's many example sections - expanded.
+alias examples="man --pager='less -p \"^[A-Z]* ?EXAMPLES\"'"
+
