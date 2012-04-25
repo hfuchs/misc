@@ -10,9 +10,9 @@
 	interactive = auto
 	status = auto
 [alias]
-	st = status -sb
 	l = log --oneline --decorate
 	s = status -sb
-	branch = branch -a
+	b = branch -a
+	d = diff -b
 [push]
 	default = tracking
