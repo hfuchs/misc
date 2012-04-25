@@ -9,20 +9,24 @@ dir=/tmp/gitnarios
 trap "rm -rf $dir" EXIT INT
 
 scenario_one () {
+    echo "------- Set up central repository."
     mkdir -p $dir/origin
     cd $dir/origin
     git init --bare
 
+    echo "------- Clone into two repos, alice and bob."
     cd ..
     git clone origin alice
     git clone origin bob
 
+    echo "------- Alice: Create README and push to origin."
     cd alice
     echo "Hello" > README
     git add README
     git commit -m "alice: Add README."
     git push origin master
 
+    echo "------- Bob: Pull, add new file and push to origin."
     cd ../bob
     git pull
     echo "bob" > bob
@@ -30,6 +34,7 @@ scenario_one () {
     git commit -m "bob: Add bob."
     git push
 
+    echo "------- Alice: DON'T pull, add new file and push to origin."
     cd ../alice
     echo "alice" > alice
     git add alice
@@ -37,7 +42,7 @@ scenario_one () {
     git push
     cat << ENDOFMSG
 -----------------------------------------------------------------
-Scenario 2 - Non-fast-forward updates were rejected.
+Scenario 1 - Non-fast-forward updates were rejected.
 
 Consider this graph:
 
