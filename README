@@ -6,6 +6,9 @@ A very volatile repository of arbitrary things.  Now you're up to speed.
 Contents
 -----------
 
+  + gitnarios.sh, A proof-of-concept live git tutoring script (or sth
+    along these lines).
+
   + dot_bash_aliases, Bash aliases - I'm rather proud of `examples`.
 
   + dot_gitconfig, A trivial git configuration file, usable as
@@ -21,4 +24,5 @@ Contents
 2011-11-21, HF - Added pink_noise.sh.
 2012-02-09, HF - Added dot_gitconfig.
 2012-04-25, HF - Added dot_bash_aliases.
+2012-04-25, HF - Added gitnarios.sh (finally!).
 
