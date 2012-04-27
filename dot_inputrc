@@ -1,0 +1,16 @@
+# 2011-01-22, Reactivating Vi mode.
+set editing-mode vi
+
+# 2011-01-24, In order for the following key bindings to be available in
+# insert mode, I had to specify the the 'insert mode keymap'.  That way
+# it's possible to have the same key-combination mean different things
+# in different modes, as the keymap-option is only valid for all
+# subsequent definitions.  But I'm being conservative here.
+set keymap vi-insert
+"\C-a": beginning-of-line
+"\C-k": kill-line
+"\C-l": clear-screen
+set keymap vi-command
+"\C-a": beginning-of-line
+"\C-k": kill-line
+
