@@ -6,6 +6,8 @@ A very volatile repository of arbitrary things.  Now you're up to speed.
 Contents
 -----------
 
+  + dot_inputrc, Enable vi-mode in all readline-using programs.
+
   + gitnarios.sh, A proof-of-concept live git tutoring script (or sth
     along these lines).
 
