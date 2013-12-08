@@ -6,8 +6,7 @@ A very volatile repository of arbitrary things.  Now you're up to speed.
 Contents
 -----------
 
-  + init.d_revssh, an init-script that keeps a reverse ssh session alive
-    (rather experimental).
+  + init.d_revssh, a init-script that keeps a reverse ssh session alive.
 
   + dot_inputrc, Enable vi-mode in all readline-using programs.
 
