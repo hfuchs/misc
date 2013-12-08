@@ -3,13 +3,17 @@
 #
 # Purpose: Understand git's merging behaviour.
 
-dir=/tmp/gitnarios
+dir=/tmp/gitnarios.$$
 
 # Bit of sanity
 trap "rm -rf $dir" EXIT INT
 
+comment () {
+    echo -e "\E[31m $* \E[37m"
+}
+
 scenario_one () {
-    echo "------- Set up central repository."
+    comment "------- Set up central repository."
     mkdir -p $dir/origin
     cd $dir/origin
     git init --bare
@@ -58,4 +62,41 @@ alice/master and push the merge patch.
 ENDOFMSG
 }
 
+scenario_two () {
+    echo "------- Set up two independent repositories."
+    mkdir -p $dir/a && cd $dir/a && git init
+    echo "a" > README
+    git add README
+    git commit -m "README A"
+
+    mkdir -p $dir/b && cd $dir/b && git init
+    echo "b" > README
+    git add README
+    git commit -m "README B"
+
+    echo "------- Add repo A as remote of B and fetch."
+    git remote add a $dir/a
+    git fetch a
+
+    echo "------- Current config."
+    cat .git/config
+    git branch -a
+
+    echo "------- Merge."
+    git merge a/master
+
+    cat << ENDOFMSG
+-----------------------------------------------------------------
+Scenario 2 - Merge-Replace a file (aka You Don't Lose History).
+
+I was plagued by an interesting question today: What happens if two
+repositories, A & B, create a file with the same name (different
+content) and /afterwards/ Bob makes Alice's repo one of his remotes.
+The files have no common commit in their history, so will git silently
+replace the file's history?  No.  It's just a sane merge.
+ENDOFMSG
+}
+
 scenario_one
+#scenario_two
+
