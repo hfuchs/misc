@@ -10,9 +10,16 @@
 	interactive = auto
 	status = auto
 [alias]
-	l = log --oneline --decorate
-	s = status -sb
-	b = branch -a
-	d = diff -b
+    l  = log --oneline --decorate
+    ll = log --oneline --decorate --name-status
+    s  = status -sb
+    b  = branch -a
+    d  = diff -b
+    c  = commit
 [push]
 	default = tracking
+[merge]
+    tool = vimdiff
+[diff]
+    tool = vimdiff
+
