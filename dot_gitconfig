@@ -7,16 +7,17 @@
 	interactive = auto
 	status = auto
 [alias]
-    l  = log --oneline --decorate
-    ll = log --oneline --decorate --name-status
-    s  = status -sb
-    b  = branch -a
-    d  = diff -b
-    c  = commit
+	l  = log --oneline --decorate --graph
+	ll = log --oneline --decorate --name-status --graph
+	s  = status -sb
+	b  = branch -a
+	d  = diff -b
+	c  = commit
 [push]
 	default = tracking
 [merge]
-    tool = vimdiff
+	tool = vimdiff
 [diff]
-    tool = vimdiff
+	tool = vimdiff
 
+# vim:noexpandtab:
