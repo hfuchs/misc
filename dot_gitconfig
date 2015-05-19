@@ -7,11 +7,11 @@
 	interactive = auto
 	status = auto
 [alias]
-	l  = log --oneline --decorate
-	ll = log --oneline --decorate --name-status
+	l  = log --oneline --decorate --graph
+	ll = log --oneline --decorate --name-status --graph
 	s  = status -sb
 	b  = branch -a
-	bb = b -v
+	bb = branch -a -vv
 	d  = diff -b
 	c  = commit
 [push]
