@@ -6,6 +6,9 @@ A very volatile repository of arbitrary things.  Now you're up to speed.
 Contents
 -----------
 
+  + poor_mans_backup, a mindless "backup these machines' homes"; does
+    hard-link deduplication if necessary (see script header).
+
   + init.d_revssh, a init-script that keeps a reverse ssh session alive.
 
   + dot_inputrc, Enable vi-mode in all readline-using programs.
@@ -32,4 +35,4 @@ Contents
 2012-04-25, HF - Added gitnarios.sh (finally!).
 2013-12-08, HF - Updates across the board.
 2015-05-19, HF - Clean up dot_gitconfig.
-
+2016-04-06, HF - Added poor_mans_backup.
