@@ -11,6 +11,7 @@
 	ll = log --oneline --decorate --name-status --graph
 	s  = status -sb
 	b  = branch -a
+	bb = branch -a -vv
 	d  = diff -b
 	c  = commit
 [push]
