@@ -1,0 +1,37 @@
+#!/bin/bash
+#
+# 2015-06-04, Created by H Fuchs <code@hfuchs.net>
+# 2016-01-31, Valiantly generalized.
+#
+# Purpose: If called without argument, simply backup 'source:'
+# (ie. usually the home directory on machine 'source').
+# If called with, say $(date -I), create hard-linked copy of current/.
+# Poor Man's Backup, waddayaexpect?
+#
+# Example crontab entries (permanent snapshot every week):
+#   0 03 * * * poor_mans_backup
+#   0 04 * * 0 poor_mans_backup $(date -I)
+
+# TODO Adapt
+machines="mypi"           # DNS names or SSH aliases.
+root="/data/backups/"     # Root of the backup tree.
+
+rsync_opts='-rlz'
+
+[ -e ~/.keychain/$(hostname)-sh ] && . ~/.keychain/$(hostname)-sh
+
+for machine in $machines; do
+    (
+    src="$machine:"
+    target="$root/backup_$machine/"
+
+    mkdir -p $target
+    cd $target
+
+    if [ -z "$1" ]; then
+        rsync $rsync_opts $src $target/current/
+    else
+        rsync $rsync_opts --link-dest=$target/current/ $src "$1"
+    fi
+    )
+done
